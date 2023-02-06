@@ -75,3 +75,36 @@
 // 5 9 2 3
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+Console.Write("Введите количество строк: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимум с какого целого числа формировать массив: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимум до какого целого числа формировать массив: ");
+int M = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[m, n];
+double average = 0;
+int numCol = 0;
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        array[i, j] = new Random().Next(N, M + 1);
+        Console.Write($"{array[i, j]} ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    double summ = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+       summ = summ + array[j,i]; 
+    }
+    average = summ / m;
+    numCol = i + 1;
+    Console.WriteLine($"среднее арифметическое колонки {numCol} --> {average}");
+}
