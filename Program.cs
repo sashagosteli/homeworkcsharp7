@@ -8,19 +8,22 @@
 
 // 8 7,8 -7,1 9
 
-Console.Write("Введите количество строк: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов: ");
-int n = Convert.ToInt32(Console.ReadLine());
-double [,] array = new double[m, n];
-Random random = new Random();
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        array[i, j] = random.NextDouble() * 10;
-        Console.Write($"{Math.Round(array[i, j],2)} ");
-    }
-    Console.WriteLine();
-}
-Console.WriteLine();
+// Console.Write("Введите количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double [,] array = new double[m, n];
+// Random random = new Random();
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = random.NextDouble() * 10;
+//         Console.Write($"{Math.Round(array[i, j],2)} ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine();
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+//  и возвращает значение этого элемента или же указание, что такого элемента нет.
